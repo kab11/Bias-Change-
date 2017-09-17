@@ -1,28 +1,20 @@
-var messageDisplay = document.getElementById("messageDisplay");
-var choice;
-var answerChoice = [
-	"Yes",
-	"No",
-	"Depends"
-]
-var questions = [
-	"This is a question. Please choose your answer wisely",
-	"This is a second question",
-	"This is a third question"
-]
+var trueButton = document.getElementById("true");
+var falseButton = document.getElementById("false");
+var answer = "True";
 
-// var random = Math.floor(Math.random() * answerChoice.length);
-// var answerResult = answerChoice[random];
-
-// messageDisplay.textContent = answerResult;
-
-var questionDisplay = document.getElementById("questionDisplay");
-
-var random = Math.floor(Math.random() * questions.length);
-var questionResult = questions[random];
-
-questionDisplay.textContent = questionResult;
-
-document.addEventListener("click", function(){
-	
+trueButton.addEventListener("click", function() {
+	if (this.textContent === answer) {
+		alert("Correct!");
+	} else {
+		alert("Try Again!");
+	}
 })
+
+falseButton.addEventListener("click", function() {
+	if (this.textContent === answer) {
+		alert("Correct!");
+	} else {
+		alert("Try Again!");
+	}
+})
+
